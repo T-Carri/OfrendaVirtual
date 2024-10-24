@@ -1,0 +1,123 @@
+
+.logoUTFV{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(50%, 400px);
+}
+
+.Agregar_serquerido {
+    position: fixed;
+    bottom: 20px;   /* Espacio desde la parte inferior de la pantalla */
+    right: 20px;    /* Espacio desde la parte derecha de la pantalla */
+    
+    width: 80px;    /* Anchura del botón */
+    height: 80px;   /* Altura igual a la anchura para hacerlo circular */
+    border-radius: 50%;  /* Hace que el botón tenga forma de círculo */
+    
+    background-color: #1f7e2c;  /* Color de fondo del botón */
+    color: white;  /* Color del texto o ícono dentro del botón */
+    border: none;  /* Sin borde */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;  /* Tamaño del texto o ícono */
+    cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra para darle efecto de elevación */
+    
+    /* Animación continua */
+    animation: pulse 1.5s infinite;  /* Duración de 1.5s, se repite infinitamente */
+}
+
+/* Definimos la animación 'pulse' */
+@keyframes pulse {
+    0% {
+        transform: scale(1);  /* Tamaño original */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra original */
+    }
+    50% {
+        transform: scale(1.2);  /* Aumenta el tamaño a 120% */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);  /* Sombra más grande */
+    }
+    100% {
+        transform: scale(1);  /* Regresa al tamaño original */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra original */
+    }
+}
+
+
+.Container_ofrenda_retrato{
+    height: 60vh;
+    background-color: #1f7e2c33;
+    width: min(60vw, 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .Container_ofrenda_retrato {
+      width: 90%;
+      height: 50vh;
+    }
+  }
+
+
+
+
+  /* General layout */
+
+  
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+    gap: 20px;
+    height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  /* Estilos para cada ítem del carrusel */
+  .carousel_item {
+    text-align: center;
+  }
+  
+  .carousel_image {
+    width: 50%;
+    height: 30%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center; 
+  }
+  
+  .carousel_name {
+    margin-top: 10px;
+    font-size: min(50px, 5vw);
+    color: #fffefe;
+    font-family: "Playwrite GB S", cursive;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 1024px) {
+    .carousel {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+      grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas pequeñas */
+    }
+  }
+  

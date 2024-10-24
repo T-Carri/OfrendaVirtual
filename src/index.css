@@ -1,0 +1,14 @@
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+position: relative;
+  background-image: url('./assets/7897802.webp'); /* Cambia 'ruta-de-la-imagen.jpg' por la URL o la ruta local de tu imagen */
+  background-size: cover;    /* Hace que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
